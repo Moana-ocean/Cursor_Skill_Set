@@ -1,9 +1,13 @@
 # Third-party notices
 
-The vendored skill files retain their upstream contents. The only additions inside skill directories are copies of the Superpowers root MIT license as LICENSE.txt.
+The vendored skill files retain their upstream contents. Root upstream MIT license notices are copied into imported skill directories. Existing per-skill licenses remain intact; if LICENSE.txt already exists, the root notice is added as UPSTREAM-LICENSE.txt.
 
 - Anthropic: https://github.com/anthropics/skills — frontend-design and webapp-testing; Apache License 2.0. Each directory includes its original LICENSE.txt. Original notices remain intact.
 - Vercel Labs: https://github.com/vercel-labs/agent-skills — web-design-guidelines and react-best-practices. The upstream root README declares MIT; React SKILL.md also declares MIT. No standalone root LICENSE was present in the pinned snapshot. The original README is preserved in licenses/vercel-upstream-README.md as evidence; this collection does not invent an upstream copyright notice or replacement license text.
 - Jesse Vincent / Superpowers: https://github.com/obra/superpowers — test-driven-development, systematic-debugging, verification-before-completion, finishing-a-development-branch; MIT. The original root license, including its copyright notice, is copied into each imported directory.
 
 Exact source commits are recorded in sources.lock.json. Repository documentation and installation/synchronization helpers are collection-specific additions. Consult upstream terms for redistribution and modification of the imported materials.
+
+- Tencent CloudBase: https://github.com/TencentCloudBase/skills — 32 skills, MIT; Copyright (c) 2025 Tencent CloudBase. Root license and README are preserved under licenses/.
+- Sun-sunshine06: https://github.com/Sun-sunshine06/miniprogram-skills — 6 skills and tools/wechat-gui-check, MIT; Copyright (c) 2026 Contributors. Root license and README are preserved under licenses/.
+- uni-helper: https://github.com/uni-helper/skills — 8 additional skills, MIT; Copyright (c) 2026 FliPPeDround. Original per-skill licenses and credits (including external Vue/VueUse/antfu sources) remain intact. Root license and README are preserved under licenses/. Its web-design-guidelines duplicate is omitted; the identical Vercel version remains in this collection.

@@ -31,6 +31,94 @@
       ],
       "license_file": "LICENSE",
       "license": "MIT"
+    },
+    {
+      "url": "https://github.com/TencentCloudBase/skills.git",
+      "commit": "af4505c60e666026430b880d02a73a590f442a85",
+      "skills": [
+        "ai-model-nodejs",
+        "ai-model-web",
+        "ai-model-wechat",
+        "auth-nodejs-cloudbase",
+        "auth-tool-cloudbase",
+        "auth-web-cloudbase",
+        "auth-wechat-miniprogram",
+        "cloud-api-operations",
+        "cloud-functions",
+        "cloud-storage-web",
+        "cloudbase",
+        "cloudbase-agent",
+        "cloudbase-cli",
+        "cloudbase-code-review",
+        "cloudbase-declarative-deploy",
+        "cloudbase-document-database-in-wechat-miniprogram",
+        "cloudbase-document-database-web-sdk",
+        "cloudbase-platform",
+        "cloudbase-wechat-integration",
+        "cloudrun-development",
+        "data-model-creation",
+        "http-api-cloudbase",
+        "minimal-web-baas-demo",
+        "miniprogram-development",
+        "ops-inspector",
+        "postgresql-best-practices-cloudbase",
+        "postgresql-development-cloudbase",
+        "relational-database-mcp-cloudbase",
+        "relational-database-web-cloudbase",
+        "spec-workflow",
+        "ui-design",
+        "web-development"
+      ],
+      "license_file": "LICENSE",
+      "license": "MIT",
+      "extra_files": {
+        "LICENSE": "tencent-LICENSE.txt",
+        "README.md": "tencent-upstream-README.md"
+      }
+    },
+    {
+      "url": "https://github.com/Sun-sunshine06/miniprogram-skills.git",
+      "commit": "0d6b4c0642903a96d6aa3de033b900b1cf7932fe",
+      "skills": [
+        "miniapp-center-hub-refactor",
+        "miniapp-devtools-cli-repair",
+        "miniapp-devtools-gui-check",
+        "miniapp-devtools-recovery",
+        "miniapp-official-scaffold-alignment",
+        "miniapp-user-facing-copy-trim"
+      ],
+      "license_file": "LICENSE",
+      "license": "MIT",
+      "extra_files": {
+        "LICENSE": "mini-LICENSE.txt",
+        "README.md": "mini-upstream-README.md"
+      },
+      "extra_directories": {
+        "tools/wechat-gui-check": "tools/wechat-gui-check"
+      }
+    },
+    {
+      "url": "https://github.com/uni-helper/skills.git",
+      "commit": "15909ff061a38819ad45ad2d89db3b66938eaf84",
+      "skills": [
+        "pinia",
+        "uni-helper",
+        "uniapp",
+        "unocss",
+        "vite",
+        "vue",
+        "vue-best-practices",
+        "vueuse-functions"
+      ],
+      "license_file": "LICENSE",
+      "license": "MIT",
+      "extra_files": {
+        "LICENSE": "uni-LICENSE.txt",
+        "README.md": "uni-upstream-README.md"
+      },
+      "excluded_duplicates": [
+        "web-design-guidelines"
+      ]
     }
   ]
 }

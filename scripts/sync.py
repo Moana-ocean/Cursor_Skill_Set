@@ -18,6 +18,10 @@ with tempfile.TemporaryDirectory() as temp:
     work = Path(temp)
     staged = work / 'skills'
     staged.mkdir()
+    staged_licenses = work / 'licenses'
+    staged_licenses.mkdir()
+    staged_tools = work / 'tools'
+    staged_tools.mkdir()
     for i, source in enumerate(lock['sources']):
         checkout = work / str(i)
         git('clone', '--quiet', '--no-checkout', source['url'], str(checkout))
@@ -30,11 +34,27 @@ with tempfile.TemporaryDirectory() as temp:
                 raise RuntimeError(f'Missing upstream skill: {name}')
             shutil.copytree(original, staged / name)
             if source['license_file']:
-                shutil.copy2(checkout / source['license_file'], staged / name / 'LICENSE.txt')
+                destination = staged / name / 'LICENSE.txt'
+                if destination.exists():
+                    destination = staged / name / 'UPSTREAM-LICENSE.txt'
+                shutil.copy2(checkout / source['license_file'], destination)
+        for original, destination in source.get('extra_files', {}).items():
+            shutil.copy2(checkout / original, staged_licenses / destination)
+        for original, destination in source.get('extra_directories', {}).items():
+            relative = Path(destination).relative_to('tools')
+            shutil.copytree(checkout / original, staged_tools / relative)
     # Only replace after every upstream download succeeded. Track local edits in Git first.
     if (root / 'skills').exists():
         shutil.rmtree(root / 'skills')
     shutil.copytree(staged, root / 'skills')
+    (root / 'licenses').mkdir(exist_ok=True)
+    for original in staged_licenses.iterdir():
+        shutil.copy2(original, root / 'licenses' / original.name)
+    for original in staged_tools.iterdir():
+        destination = root / 'tools' / original.name
+        if destination.exists():
+            shutil.rmtree(destination)
+        shutil.copytree(original, destination)
     if a.latest:
         (root / 'sources.lock.json').write_text(json.dumps(lock, ensure_ascii=False, indent=2) + '\n')
-    print('Synced 8 complete skill directories. Review git diff before committing.')
+    print(f'Synced {len(list(staged.iterdir()))} complete skill directories. Review git diff before committing.')
