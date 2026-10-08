@@ -119,6 +119,66 @@
       "excluded_duplicates": [
         "web-design-guidelines"
       ]
+    },
+    {
+      "url": "https://github.com/getsentry/skills.git",
+      "commit": "d18b7aa8ba878354e5c348310230e652f7690f9c",
+      "skills": [
+        "code-review",
+        "find-bugs",
+        "security-review"
+      ],
+      "license_file": "LICENSE",
+      "license": "Apache-2.0; security references CC-BY-SA-4.0",
+      "extra_files": {
+        "README.md": "sentrydev-upstream-README.md",
+        "LICENSE": "sentrydev-LICENSE.txt"
+      }
+    },
+    {
+      "url": "https://github.com/getsentry/sentry-agent-skills.git",
+      "commit": "9f54eb021916a7cff2c04a9f4e4c1f9439f3202c",
+      "skills": [
+        "sentry-fix-issues"
+      ],
+      "license_file": null,
+      "license": "Apache-2.0",
+      "extra_files": {
+        "README.md": "sentryops-upstream-README.md"
+      },
+      "license_template": "licenses/Apache-2.0.txt"
+    },
+    {
+      "url": "https://github.com/WordPress/agent-skills.git",
+      "commit": "3cf7f6f701300d80166cc0b7e6ebc667501c353d",
+      "skills": [
+        "blueprint",
+        "wordpress-router",
+        "wp-abilities-api",
+        "wp-abilities-audit",
+        "wp-abilities-verify",
+        "wp-block-development",
+        "wp-block-themes",
+        "wp-env",
+        "wp-interactivity-api",
+        "wp-patterns",
+        "wp-performance",
+        "wp-phpstan",
+        "wp-playground",
+        "wp-plugin-development",
+        "wp-plugin-directory-guidelines",
+        "wp-project-triage",
+        "wp-rest-api",
+        "wp-wpcli-and-ops",
+        "wpds"
+      ],
+      "license_file": "LICENSE",
+      "license": "GPL-2.0-or-later",
+      "extra_files": {
+        "README.md": "wordpress-upstream-README.md",
+        "LICENSE": "wordpress-LICENSE.txt"
+      },
+      "license_text_template": "licenses/GPL-2.0.txt"
     }
   ]
 }

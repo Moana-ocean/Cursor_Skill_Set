@@ -5,6 +5,7 @@ import json
 import shutil
 import subprocess
 import tempfile
+import sys
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
@@ -38,6 +39,10 @@ with tempfile.TemporaryDirectory() as temp:
                 if destination.exists():
                     destination = staged / name / 'UPSTREAM-LICENSE.txt'
                 shutil.copy2(checkout / source['license_file'], destination)
+            if source.get('license_template'):
+                shutil.copy2(root / source['license_template'], staged / name / 'LICENSE.txt')
+            if source.get('license_text_template'):
+                shutil.copy2(root / source['license_text_template'], staged / name / 'COPYING.txt')
         for original, destination in source.get('extra_files', {}).items():
             shutil.copy2(checkout / original, staged_licenses / destination)
         for original, destination in source.get('extra_directories', {}).items():
@@ -58,3 +63,4 @@ with tempfile.TemporaryDirectory() as temp:
     if a.latest:
         (root / 'sources.lock.json').write_text(json.dumps(lock, ensure_ascii=False, indent=2) + '\n')
     print(f'Synced {len(list(staged.iterdir()))} complete skill directories. Review git diff before committing.')
+subprocess.run([sys.executable, str(root / 'scripts/catalog.py')], check=True)

@@ -1,0 +1,95 @@
+{
+  "ui": [
+    "frontend-design",
+    "ui-design",
+    "web-design-guidelines"
+  ],
+  "frontend": [
+    "pinia",
+    "react-best-practices",
+    "uni-helper",
+    "uniapp",
+    "unocss",
+    "vite",
+    "vue",
+    "vue-best-practices",
+    "vueuse-functions"
+  ],
+  "miniprogram": [
+    "ai-model-wechat",
+    "auth-wechat-miniprogram",
+    "cloudbase-document-database-in-wechat-miniprogram",
+    "cloudbase-wechat-integration",
+    "miniapp-center-hub-refactor",
+    "miniapp-devtools-cli-repair",
+    "miniapp-devtools-gui-check",
+    "miniapp-devtools-recovery",
+    "miniapp-official-scaffold-alignment",
+    "miniapp-user-facing-copy-trim",
+    "miniprogram-development"
+  ],
+  "cloudbase": [
+    "ai-model-nodejs",
+    "ai-model-web",
+    "auth-nodejs-cloudbase",
+    "auth-tool-cloudbase",
+    "auth-web-cloudbase",
+    "cloud-api-operations",
+    "cloud-functions",
+    "cloud-storage-web",
+    "cloudbase",
+    "cloudbase-agent",
+    "cloudbase-cli",
+    "cloudbase-code-review",
+    "cloudbase-declarative-deploy",
+    "cloudbase-document-database-web-sdk",
+    "cloudbase-platform",
+    "cloudrun-development",
+    "data-model-creation",
+    "http-api-cloudbase",
+    "minimal-web-baas-demo",
+    "ops-inspector",
+    "postgresql-best-practices-cloudbase",
+    "postgresql-development-cloudbase",
+    "relational-database-mcp-cloudbase",
+    "relational-database-web-cloudbase",
+    "spec-workflow",
+    "web-development"
+  ],
+  "testing": [
+    "finishing-a-development-branch",
+    "systematic-debugging",
+    "test-driven-development",
+    "verification-before-completion",
+    "webapp-testing"
+  ],
+  "review": [
+    "code-review",
+    "find-bugs",
+    "security-review"
+  ],
+  "monitoring": [
+    "sentry-fix-issues"
+  ],
+  "wordpress": [
+    "blueprint",
+    "wordpress-router",
+    "wp-abilities-api",
+    "wp-abilities-audit",
+    "wp-abilities-verify",
+    "wp-block-development",
+    "wp-block-themes",
+    "wp-env",
+    "wp-interactivity-api",
+    "wp-patterns",
+    "wp-performance",
+    "wp-phpstan",
+    "wp-playground",
+    "wp-plugin-development",
+    "wp-plugin-directory-guidelines",
+    "wp-project-triage",
+    "wp-rest-api",
+    "wp-wpcli-and-ops",
+    "wpds"
+  ]
+}
